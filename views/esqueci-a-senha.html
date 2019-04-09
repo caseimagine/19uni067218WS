@@ -1,0 +1,73 @@
+<div class="v-container">
+    <div class="v-container-inner main-bg">
+      <div class="wrapper">
+        <div class="header">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+                <div class="card card-signup">
+                  <div class="header header-primary text-center" style="margin-bottom: 0; padding-bottom: -0;">
+                    <h1 class="text-center">
+                      <img class="img-responsive" style="display: inline-block" src="images/logo-campanha.c2f9278a.png" alt="{{appTitle}}" />
+                    </h1>
+                    <br />
+                    <h4 translate>Redefinir senha</h4>
+                  </div>
+                  <form name="userForm" ng-submit="submitFormRequestNewPassword(userForm.$valid, email)" novalidate>
+                    <div class="language-select text-center bg-primary" ng-controller="LanguageselectCtrl" ng-if="Utils.keys(grupo.multilingua.linguas).length > 1"
+                      style="padding-top: 20px; padding-bottom: 20px; color: white;">
+  
+                      <ul class="list-inline" style="margin-bottom: 0;">
+                        <li>
+                          <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                        </li>
+                        <li ng-repeat="(key, value) in localesNamesWithKeys">
+                          <small>
+                            <a href="" style="color: white;" ng-click="changeLanguage(key)" ng-class="key === currentLocaleDisplayName ? 'text-underline' : ''">
+                              <span></span> {{value}}</a>
+                          </small>
+                        </li>
+                      </ul>
+  
+                    </div>
+                    <div class="content">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="material-icons">email</i>
+                        </span>
+                        <input type="email" name="email" class="form-control" ng-model="email" placeholder="{{ 'Insira seu e-mail' | translate }}" ng-keyup="email = email.toLowerCase();" ng-disabled="novaSenhaRequisitada">
+                        <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">{{'Insira um
+                          e-mail válido' | translate}}</p>
+                      </div>
+                    </div>
+  
+                    <div class="footer text-center">
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <button type="submit" href="#" class="btn btn-primary" ng-disabled="userForm.email.$invalid || !userForm.email.$viewValue || novaSenhaRequisitada">
+                            <i class="material-icons fa-spin" ng-if="stateIsLoading">autorenew</i> <span translate>Enviar</span></button>
+                          <div class="alert alert-danger" ng-show="hasError">
+                            <span style="text-transform: capitalize">{{errorMsg | translate}}</span>
+                          </div>
+                          <div class="alert alert-success" ng-if="novaSenhaRequisitada">
+                            <span translate>Verifique sua caixa de entrada para prosseguirmos com a redefinição de sua senha</span>
+                          </div>
+                        </div>
+                        <div class="col-xs-12">
+                          <!-- <div ng-include="'/views/footer.html'"></div> -->
+                          <div class="alert alert-primary text-center" role="alert" style="margin-bottom: 0;">
+                            <p><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Em caso de dúvidas, entre em contato pelos telefones (11) 3957 6513 com Silvia,  (11) 3957 6511 com Mirian, ou pelo e-mail: <a href="mailto:rsvp.unilever@voqin.com">rsvp.unilever@VOQIN.com</a>.</p>
+                          </div>
+                        </div>
+                      </div>
+  
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
