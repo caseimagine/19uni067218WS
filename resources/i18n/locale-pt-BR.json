@@ -197,8 +197,8 @@
     },
 
     "Upload":{
-        "Title":"Upload da página da foto do passaporte",
-        "Descricao":"Faça aqui o upload do seu passaporte e do visto digitalizado. Uma vez que a inscrição for concluída você não poderá mais alterar seus dados.",
+        "Title":"Upload da página da foto do passaporte e do visto",
+        "Descricao":"Faça aqui o upload do seu passaporte e do visto americano digitalizado. Uma vez que a inscrição for concluída você não poderá mais alterar seus dados.",
         "DetalheComParticipante": "Você deve definir a qual participante o arquivo é referente (titular ou acompanhante) para concluir a inscrição.",
         "SelecioneArraste": "Arraste seus arquivos aqui",
         "Ou": "ou",
