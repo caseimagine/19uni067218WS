@@ -53,6 +53,11 @@ background-position: center 22%;">
         </div>
     </div>
 </div>
+<div class="sub-header">
+    <div class="container">
+        <h2>Washington DC > 4 a 9 de agosto</h2>
+    </div>
+</div>
 <div class="container">
     <div class="main main-raised">
         <div class="section section-basic">
@@ -71,13 +76,15 @@ background-position: center 22%;">
 <div class="footer">
     <div ng-include="'/views/footer.html'"></div>
     <div class="container">
-        <div class="language-select text-center" ng-controller="LanguageselectCtrl" ng-if="Utils.keys(grupo.multilingua.linguas).length > 1">
+        <div class="language-select text-center" ng-controller="LanguageselectCtrl"
+            ng-if="Utils.keys(grupo.multilingua.linguas).length > 1">
 
             <ul class="list-inline" style="margin-bottom: 0;">
                 <li><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></li>
                 <li ng-repeat="(key, value) in localesNamesWithKeys">
                     <small>
-                        <a href="" ng-click="changeLanguage(key)" ng-class="key === currentLocaleDisplayName ? 'text-underline' : ''">
+                        <a href="" ng-click="changeLanguage(key)"
+                            ng-class="key === currentLocaleDisplayName ? 'text-underline' : ''">
                             <span></span> {{value}}</a>
                     </small>
                 </li>
