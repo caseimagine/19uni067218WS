@@ -1,27 +1,10 @@
-<h1 translate="Palestrantes"></h1>
-
-<div class="row dynamic-grid hidden-xs" angular-grid="agendas" ag-refresh-on-img-load="true">
-    <div class="col-xs-12 col-sm-6 col-md-4 grid" data-ng-repeat="agenda in agendas">
-        <!-- <pre>{{agenda | json}}</pre> -->
+<h1 translate="Agenda"></h1>
+<br>
+<div class="row ">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-mh" ng-repeat="agenda in agendas">
         <div class="agenda-box">
-            <img src="{{agenda.capa.sizes.medium_large}}" alt="" class="img-responsive agenda-icone">
-            <!-- <h2>{{agenda.titulo}}</h2> -->
-            <div class="agenda-box-conteudo">
-                <ng-bind-html ng-bind-html="agenda.conteudo"></ng-bind-html>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row visible-xs">
-    <div class="col-xs-12 col-sm-6 col-md-4 " ng-repeat="agenda in agendas">
-        <!-- <pre>{{agenda | json}}</pre> -->
-        <div class="agenda-box">
-            <img src="{{agenda.capa.sizes.medium_large}}" alt="" class="img-responsive agenda-icone">
-            <!-- <h2>{{agenda.titulo}}</h2> -->
-            <div class="agenda-box-conteudo">
-                <ng-bind-html ng-bind-html="agenda.conteudo"></ng-bind-html>
-            </div>
+            <em><small>{{agenda.titulo}}</small></em> 
+            <ng-bind-html ng-bind-html="agenda.conteudo"></ng-bind-html>
         </div>
     </div>
 </div>
