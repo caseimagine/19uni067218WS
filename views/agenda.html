@@ -1,8 +1,8 @@
 <h1 translate="Agenda"></h1>
 <br>
 <div class="row ">
-    <div class="col-xs-12 col-sm-6 col-md-4 col-mh" ng-repeat="agenda in agendas">
-        <div class="agenda-box">
+    <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="agenda in agendas">
+        <div class="agenda-box  col-mh">
             <em><small>{{agenda.titulo}}</small></em> 
             <ng-bind-html ng-bind-html="agenda.conteudo"></ng-bind-html>
         </div>
